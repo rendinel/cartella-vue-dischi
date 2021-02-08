@@ -12,21 +12,22 @@
     </head>
     <body>
         <header>
-            <div class="container">
+            <div class="container" >
                 <img src="logo.png" alt="logo" />
             </div>
         </header>
 
-        <select v-model="selected">
-          <option v-for="item in disksList" v-bind:value="disksList.genre">
-            {{ option.text }}
-          </option>
-        </select>
-        <span>Selected: {{ selected }}</span>
-        <span>Selected: {{ selected }}</span>
+
 
         <div class="cds-container container" id="app">
             <!-- Disco ad esempio -->
+            <select v-model="selected" >
+              <option v-for="item in genre" v-bind:value="item" v-model='searchContactText' @keyup='searchContacts()'>
+                {{item}}
+              </option>
+            </select>
+            <span>Selected: {{selected}}</span>
+            <span>Selected: {{selected}}</span>
             <div class="cd" v-for="item in disksList">
                 <img :src="item.poster" alt="">
                 <h3>{{item.title}}</h3>

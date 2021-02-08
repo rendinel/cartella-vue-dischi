@@ -2,7 +2,22 @@ new Vue({
   el: '#app',
   data: {
     disksList:[],
-    selected:''
+    genre:[
+      'jazz',
+      'pop',
+      'metal',
+      'rock'
+    ],
+    selected:'',
+  },
+  methods: {
+    searchGenre: function() {
+    this.genre.forEach((element) => {
+    if(genre.item == disksList.genre) {
+      element.visible = true;
+    } else {
+      element.visible = false;
+    }
   },
   mounted() {
   const self = this;
