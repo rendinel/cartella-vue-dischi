@@ -1,7 +1,8 @@
 new Vue({
   el: '#app',
   data: {
-    disksList:[]
+    disksList:[],
+    selected:''
   },
   mounted() {
   const self = this;
@@ -11,7 +12,7 @@ new Vue({
        console.log(disks);
        self.disksList = disks;
     })
-  
+
   },
 
 

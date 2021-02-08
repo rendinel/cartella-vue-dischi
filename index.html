@@ -17,6 +17,14 @@
             </div>
         </header>
 
+        <select v-model="selected">
+          <option v-for="item in disksList" v-bind:value="disksList.genre">
+            {{ option.text }}
+          </option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+        <span>Selected: {{ selected }}</span>
+
         <div class="cds-container container" id="app">
             <!-- Disco ad esempio -->
             <div class="cd" v-for="item in disksList">
